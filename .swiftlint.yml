@@ -1,0 +1,33 @@
+excluded:
+  - Pods
+
+disabled_rules:
+  - force_cast
+  - force_try
+  - function_parameter_count
+  - cyclomatic_complexity
+  - todo
+
+line_length:
+  warning: 200
+  ignores_comments: true
+
+type_body_length:
+  - 300 # warning
+  - 400 # error
+
+file_length:
+  warning: 500
+  error: 1200
+
+identifier_name:
+  allowed_symbols: "_"
+  min_length: # only min_length
+    error: 1 # only error
+  excluded: # excluded via string array
+    - id
+    - URL
+    - i
+    - j
+    - x
+    - y
