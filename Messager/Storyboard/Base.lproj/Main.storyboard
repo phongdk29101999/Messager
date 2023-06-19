@@ -31,9 +31,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU5-AV-yXv">
-                                <rect key="frame" x="38" y="165" width="50" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU5-AV-yXv">
+                                <rect key="frame" x="20" y="207" width="353" height="28"/>
                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,9 +41,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bU5-AV-yXv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="19M-Md-0XE"/>
                             <constraint firstItem="Jc7-rv-Gvo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="C0y-7W-3Rv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jc7-rv-Gvo" secondAttribute="trailing" id="D08-Kv-6kY"/>
                             <constraint firstItem="Jc7-rv-Gvo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LyK-S7-skj"/>
+                            <constraint firstItem="bU5-AV-yXv" firstAttribute="top" secondItem="Jc7-rv-Gvo" secondAttribute="bottom" constant="50" id="X6g-9v-PLm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bU5-AV-yXv" secondAttribute="trailing" constant="20" id="rj6-Kb-lpY"/>
                         </constraints>
                     </view>
                 </viewController>

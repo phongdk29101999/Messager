@@ -1,0 +1,57 @@
+name: Messager
+configs:
+  Debug: debug
+  Release: release
+settings:
+  base:
+    IPHONEOS_DEPLOYMENT_TARGET: "14.0"
+    # for M1 Mac
+    EXCLUDED_ARCHS[sdk=iphonesimulator*]: arm64
+    VALIDATE_WORKSPACE: true
+    ENABLE_BITCODE: false
+attributes:
+  LastUpgradeCheck: "1431"
+targetTemplates:
+  MessagerBase:
+    type: application
+    platform: iOS
+    platformFilter: iOS
+    sources:
+      - path: Messager
+    preBuildScripts:
+      - name: Copy Google Service Info
+        path: ./Scripts/CopyGoogleService.sh
+        basedOnDependencyAnalysis: false
+    postbuildScripts:
+      - name: SwiftLint
+        runOnlyWhenInstalling: false
+        path: ./Scripts/SwiftLint.sh
+        shell: /bin/sh
+        showEnvVars: false
+        basedOnDependencyAnalysis: false
+    settings:
+      base:
+        PRODUCT_NAME: Messager
+        BUNDLE_DISPLAY_NAME: "Messager"
+        INFOPLIST_KEY_CFBundleDisplayName: Messager
+        SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
+        SUPPORTS_MACCATALYST: NO
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+        PRODUCT_BUNDLE_IDENTIFIER: com.kinkaze.Messager
+        MARKETING_VERSION: 1.0.0
+        CURRENT_PROJECT_VERSION: "1"
+        TARGETED_DEVICE_FAMILY: "1"
+        IPHONEOS_DEPLOYMENT_TARGET: "14.0"
+      configs:
+        Debug:
+          CODE_SIGN_IDENTITY: Apple Development
+          CODE_SIGN_STYLE: Automatic
+          DEVELOPMENT_TEAM: 5BVY2SC6J5
+        Release:
+          CODE_SIGN_IDENTITY: Apple Development
+          CODE_SIGN_STYLE: Automatic
+          DEVELOPMENT_TEAM: 5BVY2SC6J5
+targets:
+  Messager:
+    templates:
+      - MessagerBase
