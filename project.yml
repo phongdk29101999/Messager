@@ -9,11 +9,13 @@ settings:
     EXCLUDED_ARCHS[sdk=iphonesimulator*]: arm64
     VALIDATE_WORKSPACE: true
     ENABLE_BITCODE: false
-
+attributes:
+  LastUpgradeCheck: "1431"
 targetTemplates:
   MessagerBase:
     type: application
     platform: iOS
+    platformFilter: iOS
     sources:
       - path: Messager
     preBuildScripts:
@@ -29,8 +31,13 @@ targetTemplates:
         basedOnDependencyAnalysis: false
     settings:
       base:
+        PRODUCT_NAME: Messager
         BUNDLE_DISPLAY_NAME: "Messager"
-        PRODUCT_BUNDLE_IDENTIFIER: com.kikaze.Messager
+        INFOPLIST_KEY_CFBundleDisplayName: Messager
+        SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
+        SUPPORTS_MACCATALYST: NO
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+        PRODUCT_BUNDLE_IDENTIFIER: com.kinkaze.Messager
         MARKETING_VERSION: 1.0.0
         CURRENT_PROJECT_VERSION: "1"
         TARGETED_DEVICE_FAMILY: "1"
@@ -39,11 +46,11 @@ targetTemplates:
         Debug:
           CODE_SIGN_IDENTITY: Apple Development
           CODE_SIGN_STYLE: Automatic
-          DEVELOPMENT_TEAM: Personal Team,
+          DEVELOPMENT_TEAM: 5BVY2SC6J5
         Release:
           CODE_SIGN_IDENTITY: Apple Development
           CODE_SIGN_STYLE: Automatic
-          DEVELOPMENT_TEAM: Personal Team,
+          DEVELOPMENT_TEAM: 5BVY2SC6J5
 targets:
   Messager:
     templates:

@@ -8,6 +8,7 @@ setup:
 
 .PHONY: install-bundler
 install-bundler:
+	bundle config path vendor/bundle
 	bundle install
 
 .PHONY: install-pod

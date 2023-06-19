@@ -3,20 +3,20 @@ platform :ios, '14.0'
 plugin 'cocoapods-binary'
 
 def install_pods 
-  pod 'Firebase/Core'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
-  pod 'Firebase/Storage'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Messaging'
+  pod 'FirebaseCore'
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
+  pod 'FirebaseStorage'
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseMessaging'
   pod 'FirebaseFirestoreSwift'
-  pod 'Gallery', '2.4.0', :binary => true
-  pod 'InputBarAccessoryView', '5.5.0', :binary => true
-  pod 'MessageKit', '3.8.0', :binary => true
-  pod 'ProgressHUD', '13.6.2', :binary => true
-  pod 'RealmSwift', '10.40.2', :binary => true
-  pod 'SKPhotoBrowser', '7.1.0', :binary => true
-  pod 'SwiftLint', :binary => true
+  pod 'Gallery', '~>2.4.0'
+  pod 'InputBarAccessoryView', '~>5.5.0'
+  pod 'MessageKit', '~>3.8.0'
+  pod 'ProgressHUD', '~>13.6.2'
+  pod 'RealmSwift', '~>10.40.2'
+  pod 'SKPhotoBrowser', '~>7.1.0'
+  pod 'SwiftLint'
 end
 
 # Comment the next line if you don't want to use dynamic frameworks
@@ -27,4 +27,14 @@ inhibit_all_warnings!
 
 target 'Messager' do
   install_pods
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.0'
+      # for M1 Mac
+      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+    end
+  end
 end
