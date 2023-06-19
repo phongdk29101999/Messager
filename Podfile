@@ -1,11 +1,8 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '14.0'
+platform :ios, '14.0'
+plugin 'cocoapods-binary'
 
-target 'Messager' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for Messager
+def install_pods 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
@@ -13,14 +10,21 @@ target 'Messager' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
   pod 'FirebaseFirestoreSwift'
+  pod 'Gallery', '2.4.0', :binary => true
+  pod 'InputBarAccessoryView', '5.5.0', :binary => true
+  pod 'MessageKit', '3.8.0', :binary => true
+  pod 'ProgressHUD', '13.6.2', :binary => true
+  pod 'RealmSwift', '10.40.2', :binary => true
+  pod 'SKPhotoBrowser', '7.1.0', :binary => true
+  pod 'SwiftLint', :binary => true
+end
 
-  pod 'Gallery'
-  pod 'RealmSwift'
+# Comment the next line if you don't want to use dynamic frameworks
+use_frameworks!
+enable_bitcode_for_prebuilt_frameworks!
+keep_source_code_for_prebuilt_frameworks!
+inhibit_all_warnings! 
 
-  pod 'ProgressHUD'
-  pod 'SKPhotoBrowser'
-
-  pod 'MessageKit'
-  pod 'InputBarAccessoryView'
-
+target 'Messager' do
+  install_pods
 end

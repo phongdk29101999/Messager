@@ -851,6 +851,7 @@ PODS:
   - RealmSwift (10.40.2):
     - Realm (= 10.40.2)
   - SKPhotoBrowser (7.1.0)
+  - SwiftLint (0.52.2)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -860,12 +861,13 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - FirebaseFirestoreSwift
-  - Gallery
-  - InputBarAccessoryView
-  - MessageKit
-  - ProgressHUD
-  - RealmSwift
-  - SKPhotoBrowser
+  - Gallery (= 2.4.0)
+  - InputBarAccessoryView (= 5.5.0)
+  - MessageKit (= 3.8.0)
+  - ProgressHUD (= 13.6.2)
+  - RealmSwift (= 10.40.2)
+  - SKPhotoBrowser (= 7.1.0)
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
@@ -901,6 +903,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - SKPhotoBrowser
+    - SwiftLint
 
 SPEC CHECKSUMS:
   abseil: 926fb7a82dc6d2b8e1f2ed7f3a718bce691d1e46
@@ -935,7 +938,8 @@ SPEC CHECKSUMS:
   Realm: 731e86d9388287b18e36b0beb2493fc4845ce8a2
   RealmSwift: c2a1059ba52e1e08467b1253b1d4ab354ef3177b
   SKPhotoBrowser: cd95b95a6f352fc2a50992721299f75ead77f9ab
+  SwiftLint: 1ac76dac888ca05cb0cf24d0c85887ec1209961d
 
-PODFILE CHECKSUM: 426abf79b94428c6a42983fcc69426c05aa097dc
+PODFILE CHECKSUM: 5281e46d048c759c2b479736f8731815e7602492
 
 COCOAPODS: 1.12.1
