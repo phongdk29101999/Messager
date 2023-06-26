@@ -12,10 +12,13 @@ def install_pods
   pod 'FirebaseFirestoreSwift'
   pod 'Gallery', '~>2.4.0'
   pod 'InputBarAccessoryView', '~>5.5.0'
+  pod 'IQKeyboardManagerSwift','6.5.6'
   pod 'MessageKit', '~>3.8.0'
   pod 'ProgressHUD', '~>13.6.2'
+  pod 'ReachabilitySwift','5.0.0'
   pod 'RealmSwift', '~>10.40.2'
   pod 'SKPhotoBrowser', '~>7.1.0'
+  pod 'SnapKit', '~> 5.0.0'
   pod 'SwiftLint'
 end
 

@@ -10,7 +10,9 @@ import UIKit
 
 extension UIColor {
     static let buttonDisable = UIColor(named: "ButtonDisable")
+    static let lightBlue = UIColor(named: "LightBlue")
     static let lightGray = UIColor(named: "LightGray")
+    static let shadow = UIColor(named: "Shadow")
     static let subText = UIColor(named: "SubText")
     static let Text = UIColor(named: "Text")
 
