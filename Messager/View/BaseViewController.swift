@@ -18,6 +18,23 @@ class BaseViewController: UIViewController, CommonViewProtocol {
         return String(describing: type(of: self))
     }
 
+    // whether it is contained in a modal
+    var inModal: Bool = false
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let navigationController = self.navigationController {
+            navigationController.navigationBar.isTranslucent = false
+            navigationController.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+            navigationController.navigationBar.shadowImage = UIImage()
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        super.viewWillAppear(animated)
+    }
+
     func startLoading() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -26,22 +43,55 @@ class BaseViewController: UIViewController, CommonViewProtocol {
                 return
             }
             if NetworkManager.shared.isNetworkAvaiable {
-                ProgressHUD.show()
+                ProgressHUD.colorAnimation = .systemBlue
+                ProgressHUD.animationType = .circleRotateChase
+                ProgressHUD.show(nil, interaction: false)
             }
         }
     }
 
     func finishLoading(completion: (() -> Void)? = nil) {
         guard isVisible(view: view) else { return }
+        ProgressHUD.dismiss()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            if !ProgressHUD.isVisibleError {
-                ProgressHUD.dismiss()
+            if !ProgressHUD.isVisibleError && !ProgressHUD.isVisibleSuccess {
+                completion?()
             }
         }
     }
 
-    func showError(_ message: String) {
-        ProgressHUD.showError(message)
+    func showFailed(_ message: String?) {
+        if message != nil {
+            log(message!)
+        }
+        ProgressHUD.isVisibleError = true
+        ProgressHUD.colorAnimation = .systemGray
+        ProgressHUD.showFailed(message, interaction: false, delay: 3)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            ProgressHUD.isVisibleError = false
+        }
+    }
+
+    func showError(_ message: String?) {
+        if message != nil {
+            log(message!)
+        }
+        ProgressHUD.isVisibleError = true
+        ProgressHUD.showError(message, image: nil, interaction: false, delay: 3)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            ProgressHUD.isVisibleError = false
+        }
+    }
+
+    func showSuccess(_ message: String?) {
+        if message != nil {
+            log(message!)
+        }
+        ProgressHUD.isVisibleSuccess = true
+        ProgressHUD.showSuccess(message, image: nil, interaction: false, delay: 3)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            ProgressHUD.isVisibleSuccess = false
+        }
     }
 
     private func isVisible(view: UIView) -> Bool {
@@ -57,6 +107,7 @@ class BaseViewController: UIViewController, CommonViewProtocol {
     }
 }
 
-private extension ProgressHUD {
-    static var isVisibleError: Bool = false
+extension ProgressHUD {
+    static var isVisibleError = false
+    static var isVisibleSuccess = false
 }

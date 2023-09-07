@@ -13,6 +13,7 @@ def install_pods
   pod 'Gallery', '~>2.4.0'
   pod 'InputBarAccessoryView', '~>5.5.0'
   pod 'IQKeyboardManagerSwift','6.5.6'
+  pod 'KeychainAccess','4.2.2'
   pod 'MessageKit', '~>3.8.0'
   pod 'ProgressHUD', '~>13.6.2'
   pod 'ReachabilitySwift','5.0.0'
