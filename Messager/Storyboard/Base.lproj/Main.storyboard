@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bMD-gt-TLQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,51 +8,56 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Nunito-Bold.ttf">
-            <string>Nunito-Bold</string>
-        </array>
-        <array key="Nunito-Regular.ttf">
-            <string>Nunito-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
-        <!--Login View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item 2-->
+        <scene sceneID="JQE-yl-X7B">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Messager" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="9aB-xe-1R8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c9z-gj-LqE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jc7-rv-Gvo">
-                                <rect key="frame" x="0.0" y="109" width="393" height="48"/>
-                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU5-AV-yXv">
-                                <rect key="frame" x="20" y="207" width="353" height="28"/>
-                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="Wvf-Hz-hyT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="bU5-AV-yXv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="19M-Md-0XE"/>
-                            <constraint firstItem="Jc7-rv-Gvo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="C0y-7W-3Rv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jc7-rv-Gvo" secondAttribute="trailing" id="D08-Kv-6kY"/>
-                            <constraint firstItem="Jc7-rv-Gvo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LyK-S7-skj"/>
-                            <constraint firstItem="bU5-AV-yXv" firstAttribute="top" secondItem="Jc7-rv-Gvo" secondAttribute="bottom" constant="50" id="X6g-9v-PLm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bU5-AV-yXv" secondAttribute="trailing" constant="20" id="rj6-Kb-lpY"/>
-                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="2VJ-zm-VVR"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GFu-DV-hXK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="4"/>
+            <point key="canvasLocation" x="1419" y="360"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="P1x-Fn-j2U">
+            <objects>
+                <viewController id="vDX-ml-Ylv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tAL-G1-DmV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YNx-jf-R4Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="hrY-sz-9Ll"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RRZ-eM-IBo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1419" y="-248"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="TRw-Im-Md9">
+            <objects>
+                <tabBarController storyboardIdentifier="TopView" modalPresentationStyle="fullScreen" id="bMD-gt-TLQ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TUI-aZ-xwI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vDX-ml-Ylv" kind="relationship" relationship="viewControllers" id="nR1-1F-YYT"/>
+                        <segue destination="9aB-xe-1R8" kind="relationship" relationship="viewControllers" id="NQq-uD-mBB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxt-mb-0tc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="55"/>
         </scene>
     </scenes>
     <resources>

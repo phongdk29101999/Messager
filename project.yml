@@ -12,7 +12,7 @@ settings:
 attributes:
   LastUpgradeCheck: "1431"
 targetTemplates:
-  MessagerBase:
+  MessagerTargetBase:
     type: application
     platform: iOS
     platformFilter: iOS
@@ -54,4 +54,18 @@ targetTemplates:
 targets:
   Messager:
     templates:
-      - MessagerBase
+      - MessagerTargetBase
+    settings:
+      INFOPLIST_KEY_CFBundleDisplayName: Messager
+    configs: 
+      Debug:
+        CODE_SIGN_ENTITLEMENTS: Messager/Entitlements/Messager.entitlements
+schemeTemplates:
+  MessagerSchemeBase:
+    build:
+      targets: 
+        ${scheme_name}: build
+schemes:
+  Messager:
+    templates:
+      - MessagerSchemeBase

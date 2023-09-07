@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="pfF-2v-QIh">
+            <objects>
+                <viewController storyboardIdentifier="Login" modalPresentationStyle="fullScreen" id="Vfq-34-26a" customClass="LoginViewController" customModule="Messager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DYP-1r-0bj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4D-dE-V1F" userLabel="Login Title" customClass="DesignableLabel" customModule="Messager" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="109" width="393" height="48"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39a-zr-qFO" userLabel="Login Form">
+                                <rect key="frame" x="20" y="207" width="353" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYi-eG-BCx" customClass="DesignableLabel" customModule="Messager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="OFk-0k-u3c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
+                                        <color key="textColor" name="label"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="clv-JC-l5c" customClass="UnderlineTextField" customModule="Messager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="35" width="353" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="JdK-jm-QjT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                                <color key="value" name="LightGray"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBH-cS-8zy" customClass="DesignableLabel" customModule="Messager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="353" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="8sz-HN-5MY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
+                                        <color key="textColor" name="label"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hhj-MO-MUF" customClass="UnderlineTextField" customModule="Messager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="125" width="353" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Hle-nC-6nj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                                <color key="value" name="LightGray"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zci-7P-rCA" customClass="DesignableLabel" customModule="Messager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180" width="353" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="BAC-qF-ArY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
+                                        <color key="textColor" name="label"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repeat your password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ja7-Sk-qe3" customClass="UnderlineTextField" customModule="Messager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="215" width="353" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="UwP-AO-tGt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                                <color key="value" name="LightGray"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="zci-7P-rCA" firstAttribute="top" secondItem="hhj-MO-MUF" secondAttribute="bottom" constant="20" id="6q0-GJ-xXY"/>
+                                    <constraint firstAttribute="trailing" secondItem="zci-7P-rCA" secondAttribute="trailing" id="Kfu-dP-DFe"/>
+                                    <constraint firstItem="ja7-Sk-qe3" firstAttribute="top" secondItem="zci-7P-rCA" secondAttribute="bottom" id="Qdw-Iq-cjw"/>
+                                    <constraint firstItem="nBH-cS-8zy" firstAttribute="leading" secondItem="39a-zr-qFO" secondAttribute="leading" id="TDK-dy-aXh"/>
+                                    <constraint firstItem="nBH-cS-8zy" firstAttribute="top" secondItem="clv-JC-l5c" secondAttribute="bottom" constant="20" id="X2f-4S-BjL"/>
+                                    <constraint firstAttribute="trailing" secondItem="qYi-eG-BCx" secondAttribute="trailing" id="YXn-ce-uyD"/>
+                                    <constraint firstItem="clv-JC-l5c" firstAttribute="top" secondItem="qYi-eG-BCx" secondAttribute="bottom" id="bET-XA-XKB"/>
+                                    <constraint firstAttribute="trailing" secondItem="clv-JC-l5c" secondAttribute="trailing" id="d3N-tj-zL0"/>
+                                    <constraint firstItem="qYi-eG-BCx" firstAttribute="top" secondItem="39a-zr-qFO" secondAttribute="top" id="egf-f4-byn"/>
+                                    <constraint firstItem="zci-7P-rCA" firstAttribute="leading" secondItem="39a-zr-qFO" secondAttribute="leading" id="hDf-9u-EMp"/>
+                                    <constraint firstAttribute="trailing" secondItem="nBH-cS-8zy" secondAttribute="trailing" id="iWO-Vg-oSM"/>
+                                    <constraint firstAttribute="trailing" secondItem="ja7-Sk-qe3" secondAttribute="trailing" id="jdA-6b-kJU"/>
+                                    <constraint firstItem="hhj-MO-MUF" firstAttribute="top" secondItem="nBH-cS-8zy" secondAttribute="bottom" id="pkZ-80-bQd"/>
+                                    <constraint firstItem="hhj-MO-MUF" firstAttribute="leading" secondItem="39a-zr-qFO" secondAttribute="leading" id="rE1-gb-ocJ"/>
+                                    <constraint firstItem="qYi-eG-BCx" firstAttribute="leading" secondItem="39a-zr-qFO" secondAttribute="leading" id="rjM-6K-Rfw"/>
+                                    <constraint firstItem="clv-JC-l5c" firstAttribute="leading" secondItem="39a-zr-qFO" secondAttribute="leading" id="shr-jk-aDI"/>
+                                    <constraint firstAttribute="bottom" secondItem="ja7-Sk-qe3" secondAttribute="bottom" id="wjV-ae-D1O"/>
+                                    <constraint firstItem="ja7-Sk-qe3" firstAttribute="leading" secondItem="39a-zr-qFO" secondAttribute="leading" id="xbS-80-P3k"/>
+                                    <constraint firstAttribute="trailing" secondItem="hhj-MO-MUF" secondAttribute="trailing" id="zC3-ls-O1U"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0R-TQ-hCe" userLabel="ForgotPassword">
+                                <rect key="frame" x="20" y="467" width="353" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z25-15-gGt" customClass="DesignableButton" customModule="Messager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="129" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="piF-ru-IJd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Forgot password?"/>
+                                        <connections>
+                                            <action selector="onPressForgotPassword:" destination="Vfq-34-26a" eventType="touchUpInside" id="UeU-rm-cRa"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6h-8l-nfS" customClass="DesignableButton" customModule="Messager" customModuleProvider="target">
+                                        <rect key="frame" x="179" y="0.0" width="174" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="cpH-35-oyP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Resend email"/>
+                                        <connections>
+                                            <action selector="onPressResendEmail:" destination="Vfq-34-26a" eventType="touchUpInside" id="afg-vW-5R1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Z25-15-gGt" firstAttribute="top" secondItem="g0R-TQ-hCe" secondAttribute="top" id="0EH-fk-NtM"/>
+                                    <constraint firstAttribute="trailing" secondItem="V6h-8l-nfS" secondAttribute="trailing" id="9mN-0N-7Af"/>
+                                    <constraint firstItem="V6h-8l-nfS" firstAttribute="leading" secondItem="Z25-15-gGt" secondAttribute="trailing" constant="50" id="OID-iI-2rx"/>
+                                    <constraint firstAttribute="bottom" secondItem="V6h-8l-nfS" secondAttribute="bottom" constant="10" id="fg7-tr-zJ1"/>
+                                    <constraint firstItem="Z25-15-gGt" firstAttribute="leading" secondItem="g0R-TQ-hCe" secondAttribute="leading" id="fnd-GV-PVM"/>
+                                    <constraint firstItem="V6h-8l-nfS" firstAttribute="top" secondItem="g0R-TQ-hCe" secondAttribute="top" id="jNC-w7-vsC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z25-15-gGt" secondAttribute="bottom" constant="10" id="pea-SN-1Be"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="QWO-Zj-gKW" userLabel="Login Button" customClass="RoundButton" customModule="Messager" customModuleProvider="target">
+                                <rect key="frame" x="50" y="542" width="293" height="50"/>
+                                <color key="backgroundColor" name="LightBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xYy-dW-EeQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="28"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" name="Shadow"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dTitleKern">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPressLoginButton:" destination="Vfq-34-26a" eventType="touchUpInside" id="yzg-16-Dwu"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25n-vY-0YQ">
+                                <rect key="frame" x="84.666666666666686" y="753" width="224" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbo-mK-xim" customClass="DesignableLabel" customModule="Messager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="35"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                        <color key="textColor" name="label"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1P-rt-N68" customClass="DesignableButton" customModule="Messager" customModuleProvider="target">
+                                        <rect key="frame" x="171" y="0.0" width="53" height="35"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="SignUp"/>
+                                        <connections>
+                                            <action selector="onPressSignUp:" destination="Vfq-34-26a" eventType="touchUpInside" id="0Fu-lM-60T"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mbo-mK-xim" secondAttribute="bottom" id="28O-Dm-YD7"/>
+                                    <constraint firstAttribute="bottom" secondItem="n1P-rt-N68" secondAttribute="bottom" id="3Fi-Cm-zpH"/>
+                                    <constraint firstAttribute="trailing" secondItem="n1P-rt-N68" secondAttribute="trailing" id="BK6-or-WMz"/>
+                                    <constraint firstItem="mbo-mK-xim" firstAttribute="top" secondItem="25n-vY-0YQ" secondAttribute="top" id="K6R-66-eZe"/>
+                                    <constraint firstItem="n1P-rt-N68" firstAttribute="leading" secondItem="mbo-mK-xim" secondAttribute="trailing" constant="5" id="LmS-6P-eBe"/>
+                                    <constraint firstAttribute="height" constant="35" id="ROB-lD-qXe"/>
+                                    <constraint firstItem="mbo-mK-xim" firstAttribute="leading" secondItem="25n-vY-0YQ" secondAttribute="leading" id="ZgL-kl-YXL"/>
+                                    <constraint firstItem="n1P-rt-N68" firstAttribute="top" secondItem="25n-vY-0YQ" secondAttribute="top" id="xnz-iz-Ii3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y2N-RG-JZ6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y2N-RG-JZ6" firstAttribute="trailing" secondItem="o4D-dE-V1F" secondAttribute="trailing" id="00N-8P-2Fh"/>
+                            <constraint firstItem="g0R-TQ-hCe" firstAttribute="leading" secondItem="Y2N-RG-JZ6" secondAttribute="leading" constant="20" id="4IC-of-Oz2"/>
+                            <constraint firstItem="39a-zr-qFO" firstAttribute="top" secondItem="o4D-dE-V1F" secondAttribute="bottom" constant="50" id="DBa-ht-fE1"/>
+                            <constraint firstItem="QWO-Zj-gKW" firstAttribute="leading" secondItem="Y2N-RG-JZ6" secondAttribute="leading" constant="50" id="Iqr-4q-wxY"/>
+                            <constraint firstItem="Y2N-RG-JZ6" firstAttribute="bottom" secondItem="25n-vY-0YQ" secondAttribute="bottom" constant="30" id="JYU-Cq-Ruq"/>
+                            <constraint firstItem="39a-zr-qFO" firstAttribute="leading" secondItem="Y2N-RG-JZ6" secondAttribute="leading" constant="20" id="KnG-kc-3Md"/>
+                            <constraint firstItem="o4D-dE-V1F" firstAttribute="leading" secondItem="Y2N-RG-JZ6" secondAttribute="leading" id="PIx-KK-BlS"/>
+                            <constraint firstItem="25n-vY-0YQ" firstAttribute="centerX" secondItem="DYP-1r-0bj" secondAttribute="centerX" id="T4O-rA-UVO"/>
+                            <constraint firstItem="QWO-Zj-gKW" firstAttribute="top" secondItem="g0R-TQ-hCe" secondAttribute="bottom" constant="30" id="W8R-UN-q7U"/>
+                            <constraint firstItem="o4D-dE-V1F" firstAttribute="top" secondItem="Y2N-RG-JZ6" secondAttribute="top" constant="50" id="eYN-n2-1Kr"/>
+                            <constraint firstAttribute="trailing" secondItem="39a-zr-qFO" secondAttribute="trailing" constant="20" id="gPG-xg-3Vh"/>
+                            <constraint firstItem="Y2N-RG-JZ6" firstAttribute="trailing" secondItem="QWO-Zj-gKW" secondAttribute="trailing" constant="50" id="n3o-P3-wGr"/>
+                            <constraint firstItem="Y2N-RG-JZ6" firstAttribute="trailing" secondItem="g0R-TQ-hCe" secondAttribute="trailing" constant="20" id="ogv-at-3CD"/>
+                            <constraint firstItem="g0R-TQ-hCe" firstAttribute="top" secondItem="39a-zr-qFO" secondAttribute="bottom" constant="10" id="vUB-Y2-Gbc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="qYi-eG-BCx" id="sBy-fx-6nx"/>
+                        <outlet property="emailTextField" destination="clv-JC-l5c" id="VUK-CX-wbo"/>
+                        <outlet property="forgotPasswordButton" destination="Z25-15-gGt" id="v2I-ma-ka6"/>
+                        <outlet property="loginButton" destination="QWO-Zj-gKW" id="bqV-kI-cOJ"/>
+                        <outlet property="loginFormContainer" destination="39a-zr-qFO" id="aR7-Z8-avO"/>
+                        <outlet property="loginTitleLabel" destination="o4D-dE-V1F" id="Rus-FN-Efh"/>
+                        <outlet property="passwordLabel" destination="nBH-cS-8zy" id="RGs-Qe-Ddv"/>
+                        <outlet property="passwordTextField" destination="hhj-MO-MUF" id="lbp-qN-8T9"/>
+                        <outlet property="repeatPasswordLabel" destination="zci-7P-rCA" id="dGF-qM-dXj"/>
+                        <outlet property="repeatPasswordTextField" destination="ja7-Sk-qe3" id="24c-bb-f2l"/>
+                        <outlet property="resendEmailButton" destination="V6h-8l-nfS" id="PDO-ch-p4Z"/>
+                        <outlet property="signUpButton" destination="n1P-rt-N68" id="pnR-Ml-M9D"/>
+                        <outlet property="signUpLabel" destination="mbo-mK-xim" id="f81-Zw-kX7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcL-Vv-cUh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70.992366412213741" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="LightBlue">
+            <color red="0.0" green="0.68627450980392157" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGray">
+            <color red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Shadow">
+            <color red="0.0" green="0.078431372549019607" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="label">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

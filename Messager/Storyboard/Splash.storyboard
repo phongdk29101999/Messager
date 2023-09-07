@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Splash" id="Y6W-OH-hqX" customClass="SplashViewController" customModule="Messager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jp7-Cu-mTP" userLabel="Splash View">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="L5a-Cr-xkA">
+                                        <rect key="frame" x="96.666666666666686" y="150" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Mcl-th-6Xr"/>
+                                            <constraint firstAttribute="height" constant="200" id="s0W-v0-ym5"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="L5a-Cr-xkA" firstAttribute="top" secondItem="Jp7-Cu-mTP" secondAttribute="top" constant="150" id="FLd-5k-qay"/>
+                                    <constraint firstItem="L5a-Cr-xkA" firstAttribute="centerX" secondItem="Jp7-Cu-mTP" secondAttribute="centerX" id="Uxi-Qy-pg8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Jp7-Cu-mTP" secondAttribute="bottom" id="DC8-Xs-NMn"/>
+                            <constraint firstItem="Jp7-Cu-mTP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ol6-O8-KRh"/>
+                            <constraint firstItem="Jp7-Cu-mTP" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="SLL-d1-gxY"/>
+                            <constraint firstItem="Jp7-Cu-mTP" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="jGV-WJ-P69"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="splashView" destination="Jp7-Cu-mTP" id="xf5-AP-ie9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
